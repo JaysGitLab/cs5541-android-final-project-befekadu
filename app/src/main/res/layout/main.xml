@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+    <LinearLayout android:id="@+id/veggie_bar"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:orientation="vertical"
+      android:gravity="center"
+      />
+
+
+    <LinearLayout android:id="@+id/button_bar"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:orientation="horizontal"
+      >
+      <Button android:id="@+id/veggie_start"
+        android:layout_height="wrap_content"
+        android:layout_width="0dip"
+        android:layout_weight="1"
+        android:text="@string/start_veggie"
+        />
+      <Button android:id="@+id/veggie_stop"
+        android:layout_height="wrap_content"
+        android:layout_width="0dip"
+        android:layout_weight="1"
+        android:text="@string/stop_working"
+        android:visibility="gone"
+        />
+    </LinearLayout>
+
+
+    <LinearLayout 
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_above="@id/button_bar"
+      android:padding="8dp"
+      android:orientation="vertical"
+      >
+      <com.nahomebefekadu.android.veggietimer.CountDownView
+          android:id="@+id/veggie_clock"
+          android:layout_height="wrap_content"
+          android:layout_width="fill_parent"
+          android:gravity="center"
+          android:textSize="40dp"
+        />
+      <TextView android:id="@+id/veggie_status"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:textSize="32dp"
+        />
+    </LinearLayout>
+</RelativeLayout>
+
